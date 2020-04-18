@@ -5,6 +5,7 @@ import { Divider, Colors } from 'react-native-paper'
 import CounterBasic from './src/components/CounterBasic'
 import store from './src/store'
 import CounterRTKwithSliceConnect from './src/modules/CounterRTKwithSliceConnect'
+import CounterRTKwithSliceReactHook from './src/modules/CounterRTKwithSliceReactHook'
 const MyDivider = () => <Divider style={{ backgroundColor: Colors.red900 }} />
 
 export default function () {
@@ -22,6 +23,8 @@ export default function () {
           <CounterBasic />
           <MyDivider />
           <CounterRTKwithSliceConnect />
+          <MyDivider />
+          <CounterRTKwithSliceReactHook />
           <MyDivider />
         </View>
       </Provider>
