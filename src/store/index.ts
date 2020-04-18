@@ -1,7 +1,8 @@
-import { createStore, combineReducers } from 'redux'
+import { combineReducers } from 'redux'
 import countReducer from '../reducers/countReducer'
 import countsReducer from '../modules/countsSlice'
 import { configureStore } from '@reduxjs/toolkit'
+import thunk from 'redux-thunk'
 
 const rootReducer = combineReducers({
   count: countReducer,
@@ -10,6 +11,7 @@ const rootReducer = combineReducers({
 
 const store = configureStore({
   reducer: rootReducer,
+  middleware: [thunk],
 })
 
 export default store

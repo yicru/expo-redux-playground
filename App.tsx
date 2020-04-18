@@ -6,6 +6,7 @@ import CounterBasic from './src/components/CounterBasic'
 import store from './src/store'
 import CounterRTKwithSliceConnect from './src/modules/CounterRTKwithSliceConnect'
 import CounterRTKwithSliceReactHook from './src/modules/CounterRTKwithSliceReactHook'
+import RTKwithSliceReduxHooksThunkAsync from './src/modules/RTKwithSliceReduxHooksThunkAsync'
 const MyDivider = () => <Divider style={{ backgroundColor: Colors.red900 }} />
 
 export default function () {
@@ -22,9 +23,11 @@ export default function () {
           <MyDivider />
           <CounterBasic />
           <MyDivider />
-          <CounterRTKwithSliceConnect />
-          <MyDivider />
           <CounterRTKwithSliceReactHook />
+          <MyDivider />
+          <CounterRTKwithSliceConnect />
+          <Text>if ↓ click, it will be applied after 1 sec.</Text>
+          <RTKwithSliceReduxHooksThunkAsync />
           <MyDivider />
         </View>
       </Provider>
