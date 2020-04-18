@@ -3,8 +3,8 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import { Divider, Colors } from 'react-native-paper'
 import CounterBasic from './src/components/CounterBasic'
-import configureStore from './src/store'
-const store = configureStore()
+import store from './src/store'
+import CounterRTKwithSliceConnect from './src/modules/CounterRTKwithSliceConnect'
 const MyDivider = () => <Divider style={{ backgroundColor: Colors.red900 }} />
 
 export default function () {
@@ -20,6 +20,8 @@ export default function () {
         <View>
           <MyDivider />
           <CounterBasic />
+          <MyDivider />
+          <CounterRTKwithSliceConnect />
           <MyDivider />
         </View>
       </Provider>
